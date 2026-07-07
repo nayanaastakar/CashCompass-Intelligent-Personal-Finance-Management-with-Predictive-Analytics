@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --base-font-size: 14px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { 
+    font-size: var(--base-font-size);
+    min-height: 100%; 
+    scroll-behavior: smooth; 
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f8fbff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  #root { min-height: 100vh; }
+  button, input, textarea, select {
+    font: inherit;
+  }
+  ::selection {
+    background: rgba(37, 99, 235, 0.2);
+    color: #0f172a;
+  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #eef4ff; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-2xl bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply rounded-2xl px-4 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .table-th {
+    @apply bg-slate-50 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-slate-500;
+  }
+  .table-td {
+    @apply px-4 py-3.5 text-sm;
+  }
+  .form-input {
+    @apply mt-1.5 block w-full rounded-2xl border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100;
+  }
+  .form-label {
+    @apply block text-sm font-medium text-slate-700;
+  }
+  .chip-green  { @apply badge bg-emerald-100 text-emerald-700; }
+  .chip-red    { @apply badge bg-rose-100 text-rose-700; }
+  .chip-blue   { @apply badge bg-blue-100 text-blue-700; }
+  .chip-amber  { @apply badge bg-amber-100 text-amber-700; }
+  .chip-teal   { @apply badge bg-teal-100 text-teal-700; }
+}

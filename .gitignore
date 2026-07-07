@@ -1,0 +1,37 @@
+# Logs
+*.log
+backend/*.log
+ai-service/*.log
+backend-stdout.log
+backend-stderr.log
+backend-run.log
+backend-run.err.log
+ai-run.log
+ai-run.err.log
+
+# Node.js
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Python virtual environment & cache
+**/venv/
+**/__pycache__/
+*.pyc
+
+# Java/Maven
+**/target/
+**/apache-maven-3.9.6/
+**/maven.zip
+*.class
+
+# Databases
+**/data/finguarddb*
+
+# IDE/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+java_processes.txt
+
