@@ -84,8 +84,8 @@ const Dashboard = () => {
   const load = useCallback(async () => {
     setLoading(true);
     await loadSummary();
-    await refreshForecast();
     setLoading(false);
+    refreshForecast();
   }, [loadSummary, refreshForecast]);
 
   useEffect(() => { load(); }, [load]);
