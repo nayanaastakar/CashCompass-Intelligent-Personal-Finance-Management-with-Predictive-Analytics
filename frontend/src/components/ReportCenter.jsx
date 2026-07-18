@@ -42,7 +42,7 @@ const ReportCenter = () => {
       const url = URL.createObjectURL(new Blob([res.data], { type: 'text/csv' }));
       const link = document.createElement('a');
       link.href = url;
-      link.download = `finguard-${type}-report.csv`;
+      link.download = `CashCompass-${type}-report.csv`;
       link.click();
       URL.revokeObjectURL(url);
     } catch {
@@ -59,7 +59,7 @@ const ReportCenter = () => {
       const url = URL.createObjectURL(new Blob([res.data], { type: 'application/pdf' }));
       const link = document.createElement('a');
       link.href = url;
-      link.download = `finguard-${type}-report.pdf`;
+      link.download = `CashCompass-${type}-report.pdf`;
       link.click();
       URL.revokeObjectURL(url);
       await loadReports();

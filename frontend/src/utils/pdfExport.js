@@ -25,7 +25,7 @@ export const exportPDF = async (summary, forecast, setExporting) => {
     const addFooter = () => {
       setDraw(C.muted); doc.setLineWidth(0.3); doc.line(M, 287, W - M, 287);
       italic(7); setFC(C.light);
-      doc.text('FinGuard AI - Confidential Financial Report', M, 291);
+      doc.text('CashCompass AI - Confidential Financial Report', M, 291);
       doc.text(`Page ${doc.internal.getNumberOfPages()}`, W - M, 291, { align: 'right' });
     };
 
@@ -69,17 +69,17 @@ export const exportPDF = async (summary, forecast, setExporting) => {
       y += lines.length * 5 + 3;
     };
 
-    const adviceBox = (text, bg, fg) => {
+    const adviceBox = (text, bg, CC) => {
       const lines = doc.splitTextToSize(text, CW - 8);
       checkPage(lines.length * 5 + 12);
       setFill(bg); setDraw(bg); doc.roundedRect(M, y, CW, lines.length * 5 + 9, 3, 3, 'F');
-      normal(9); setFC(fg); doc.text(lines, M + 4, y + 7);
+      normal(9); setFC(CC); doc.text(lines, M + 4, y + 7);
       y += lines.length * 5 + 13;
     };
 
     // ── PAGE 1: Cover ──────────────────────────────────────────────────────
     setFill(C.brand); doc.rect(0, 0, W, 68, 'F');
-    bold(28); setFC(C.white); doc.text('FinGuard AI', M, 32);
+    bold(28); setFC(C.white); doc.text('CashCompass AI', M, 32);
     normal(12); setFC([199, 210, 254]); doc.text('Comprehensive Financial Report', M, 43);
     italic(9);  setFC([165, 180, 252]);
     doc.text(`Generated: ${new Date().toLocaleString('en-IN', { dateStyle: 'long', timeStyle: 'short' })}`, M, 53);
@@ -403,9 +403,9 @@ export const exportPDF = async (summary, forecast, setExporting) => {
     bold(10); setFC(C.brand);
     doc.text('"Financial freedom is available to those who learn about it and work for it."', M + CW / 2, y + 9, { align: 'center' });
     italic(8); setFC(C.mid); doc.text('— Robert Kiyosaki', M + CW / 2, y + 16, { align: 'center' });
-    normal(7); setFC(C.light); doc.text('Powered by FinGuard AI  |  finguard.ai', M + CW / 2, y + 22, { align: 'center' });
+    normal(7); setFC(C.light); doc.text('Powered by CashCompass AI  |  CashCompass.ai', M + CW / 2, y + 22, { align: 'center' });
 
-    doc.save(`FinGuard_Report_${new Date().toISOString().slice(0, 10)}.pdf`);
+    doc.save(`CashCompass_Report_${new Date().toISOString().slice(0, 10)}.pdf`);
   } catch (err) {
     console.error('PDF export error:', err);
     alert('PDF generation failed: ' + err.message);

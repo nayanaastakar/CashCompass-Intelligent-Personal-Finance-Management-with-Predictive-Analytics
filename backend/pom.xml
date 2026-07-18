@@ -8,11 +8,11 @@
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.finguard</groupId>
+	<groupId>com.cashcompass</groupId>
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FinGuardAPI</name>
-	<description>FinGuardAPI Backend</description>
+	<name>CashCompassAPI</name>
+	<description>CashCompassAPI Backend</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

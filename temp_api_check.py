@@ -2,7 +2,7 @@ import requests
 import sys
 sys.stdout.reconfigure(encoding='utf-8')
 base='http://127.0.0.1:8085/api'
-cred={'email':'demo@finguard.ai','password':'demo1234'}
+cred={'email':'demo@cashcompass.ai','password':'demo1234'}
 print('--- AUTHENTICATION ---')
 login=requests.post(base+'/auth/signin', json=cred, timeout=20)
 print('login status', login.status_code)

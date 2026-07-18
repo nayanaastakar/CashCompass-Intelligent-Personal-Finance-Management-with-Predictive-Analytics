@@ -129,7 +129,7 @@ def _fit_predict_series(values):
 
 @app.route('/health', methods=['GET'])
 def health_check():
-    return jsonify({"status": "healthy", "service": "FinGuard AI Service"})
+    return jsonify({"status": "healthy", "service": "CashCompass AI Service"})
 
 
 @app.route('/forecast/income-expense', methods=['POST'])

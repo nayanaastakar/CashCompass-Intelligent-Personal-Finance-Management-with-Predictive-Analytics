@@ -478,9 +478,9 @@ const AppContent = () => {
         <div className="flex min-h-screen">
           <aside className="sticky top-0 hidden h-screen w-72 flex-col border-r border-slate-200/80 bg-slate-950 px-4 py-5 text-slate-100 lg:flex">
             <Link to="/dashboard" className="flex items-center gap-3 px-2 py-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-sm font-black text-white">FG</div>
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-sm font-black text-white">CC</div>
               <div>
-                <p className="text-base font-semibold tracking-tight text-white">FinGuard<span className="text-cyan-300">.ai</span></p>
+                <p className="text-base font-semibold tracking-tight text-white">CashCompass<span className="text-cyan-300">.ai</span></p>
                 <p className="text-[11px] uppercase tracking-[0.28em] text-slate-400">Wealth OS</p>
               </div>
             </Link>
@@ -521,7 +521,7 @@ const AppContent = () => {
             <header className="sticky top-0 z-10 border-b border-slate-200/70 bg-white/70 px-6 py-4 backdrop-blur">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-slate-900">{nav.find(n => n.to === loc.pathname)?.label || 'FinGuard.ai'}</p>
+                  <p className="text-sm font-semibold text-slate-900">{nav.find(n => n.to === loc.pathname)?.label || 'CashCompass.ai'}</p>
                   <p className="text-sm text-slate-500">Everything in sync — no surprises.</p>
                 </div>
                 <div className="flex items-center gap-3">

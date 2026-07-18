@@ -102,7 +102,7 @@ const FinancialData = () => {
               Wealth Core
             </div>
             <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Portfolio & Cashflow</h1>
-            <p className="mt-3 max-w-xl text-sm leading-7 text-slate-300">Manage your granular financial records to power the FinGuard AI forecasting engine.</p>
+            <p className="mt-3 max-w-xl text-sm leading-7 text-slate-300">Manage your granular financial records to power the CashCompass AI forecasting engine.</p>
           </div>
           <button onClick={() => setShowModal(true)}
             className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-100 hover:scale-[1.02] shadow-lg">

@@ -28,9 +28,9 @@ export default function Auth({ onLogin }) {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(34,211,238,0.35),_transparent_35%)]"></div>
           <div className="relative">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-sm font-black">FG</div>
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-sm font-black">CC</div>
               <div>
-                <p className="text-xl font-semibold tracking-tight">FinGuard.ai</p>
+                <p className="text-xl font-semibold tracking-tight">CashCompass.ai</p>
                 <p className="text-xs uppercase tracking-[0.32em] text-slate-300">Financial clarity for modern families</p>
               </div>
             </div>
@@ -52,14 +52,14 @@ export default function Auth({ onLogin }) {
               ))}
             </div>
           </div>
-          <p className="relative text-sm text-slate-400">© 2025 FinGuard.ai</p>
+          <p className="relative text-sm text-slate-400">© 2025 CashCompass.ai</p>
         </div>
 
         <div className="flex items-center justify-center bg-slate-50/70 p-6 sm:p-8 lg:p-10">
           <div className="w-full max-w-md rounded-[28px] border border-slate-200/80 bg-white p-7 shadow-[0_18px_60px_rgba(15,23,42,0.08)] sm:p-8">
             <div className="mb-8 flex items-center gap-2 lg:hidden">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-700 text-sm font-black text-white">FG</div>
-              <span className="text-xl font-semibold tracking-tight text-slate-900">FinGuard<span className="text-blue-700">.ai</span></span>
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-700 text-sm font-black text-white">CC</div>
+              <span className="text-xl font-semibold tracking-tight text-slate-900">CashCompass<span className="text-blue-700">.ai</span></span>
             </div>
             <div className="mb-6">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Secure access</p>

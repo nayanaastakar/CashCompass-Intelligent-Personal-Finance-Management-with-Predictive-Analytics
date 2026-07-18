@@ -1,14 +1,14 @@
-# 🛡️ FinGuard: Intelligent Financial Stability Platform
+# 🧭 CashCompass: Intelligent Personal Finance Management with Predictive Analytics
 
-FinGuard is a comprehensive, AI-driven financial stability and decision-support platform designed specifically for variable-income users (e.g., freelancers, gig workers, and self-employed professionals). It leverages machine learning to forecast income-expense patterns, calculate financial stability scores, simulate economic stress scenarios, and provide personalized budget optimization recommendations.
+CashCompass is an intelligent personal finance management platform that evaluates users' financial health using a Financial Stability Index (FSI), detects suspicious transactions using rule-based fraud detection, predicts future financial trends using Dynamic Ensemble Forecasting, and provides personalized financial recommendations through an interactive dashboard.
 
 ---
 
 ## 🚀 Key Features
 
-* **🔮 AI Ensemble Forecasting**: Predicts future income and expenses up to 6 months in advance using an ensemble of XGBoost, Random Forest, Gradient Boosting, and Ridge Regression models.
+* **🔮 Dynamic Ensemble Forecasting**: Predicts future income and expenses up to 6 months in advance using an ensemble of XGBoost, Random Forest, Gradient Boosting, and Ridge Regression models.
 * **⚡ Scenario Simulator**: Simulates stress scenarios (e.g., a 30% drop in income or unexpected emergency expenses) to assess net worth impact and survival runways.
-* **⛈️ Stability & Weather Score**: Computes a dynamic stability score and maps it to a "financial weather forecast" (Stable, Caution, High Risk) with actionable advice.
+* **⛈️ Financial Stability Index (FSI)**: Computes a dynamic stability index score and maps it to a "financial weather forecast" (Stable, Caution, High Risk) with actionable advice.
 * **💸 Spending Regret Optimizer**: Analyzes category-wise discretionary spending and generates goal-oriented recommendations to redirect savings to emergency buffers.
 * **🎯 Goal Vault & Planner**: Track specific savings targets (e.g., emergency funds, equipment, tax prep) with custom targets, priorities, and automated timeline estimations.
 
