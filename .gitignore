@@ -27,6 +27,8 @@ ai-run.err.log
 
 # Databases
 **/data/finguarddb*
+**/data/cashcompassdb.mv.db
+**/data/*.db
 
 # IDE/OS files
 .vscode/
@@ -34,4 +36,3 @@ ai-run.err.log
 .DS_Store
 Thumbs.db
 java_processes.txt
-
