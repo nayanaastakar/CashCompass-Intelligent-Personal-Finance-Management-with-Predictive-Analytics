@@ -74,6 +74,8 @@ public class DashboardController {
         result.put("stabilityScore", latestScore.map(FinancialScore::getStabilityScore).orElse(0));
         result.put("weatherForecast", latestScore.map(FinancialScore::getWeatherForecast).orElse("Not calculated"));
         result.put("shockResistanceIndex", latestScore.map(FinancialScore::getShockResistanceIndex).orElse(0.0));
+        result.put("savingsRate", latestScore.map(FinancialScore::getSavingsRate).orElse(totalIncome > 0 ? ((totalIncome - totalExpense) / totalIncome) * 100.0 : 0.0));
+        result.put("debtToIncomeRatio", latestScore.map(FinancialScore::getDebtToIncomeRatio).orElse(totalIncome > 0 ? (totalLiabilities / totalIncome) * 100.0 : 0.0));
         result.put("scoreExplanation", latestScore.map(FinancialScore::getExplanation).orElse("Add income & expense data to generate your AI score."));
         result.put("riskAlert", buildRiskAlert(latestScore));
 

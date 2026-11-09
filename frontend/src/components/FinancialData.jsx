@@ -44,6 +44,7 @@ const getDisplay = (tab, item) => {
 const FinancialData = () => {
   const [activeTab, setActiveTab] = useState('Income');
   const [data, setData]           = useState([]);
+  const [allTotals, setAllTotals] = useState({ Income: 0, Expense: 0, Assets: 0, Liabilities: 0 });
   const [loading, setLoading]     = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData]   = useState({});
@@ -51,12 +52,30 @@ const FinancialData = () => {
 
   const cfg = TAB_CONFIG[activeTab];
 
+  const fetchAllTotals = async () => {
+    try {
+      const [inc, exp, ast, liab] = await Promise.all([
+        backendApi.get('/income').catch(() => ({ data: [] })),
+        backendApi.get('/expense').catch(() => ({ data: [] })),
+        backendApi.get('/asset').catch(() => ({ data: [] })),
+        backendApi.get('/liability').catch(() => ({ data: [] })),
+      ]);
+      setAllTotals({
+        Income: (inc.data || []).reduce((s, i) => s + Number(i.amount || 0), 0),
+        Expense: (exp.data || []).reduce((s, i) => s + Number(i.amount || 0), 0),
+        Assets: (ast.data || []).reduce((s, i) => s + Number(i.value || 0), 0),
+        Liabilities: (liab.data || []).reduce((s, i) => s + Number(i.amount || 0), 0),
+      });
+    } catch {}
+  };
+
   const fetchData = async () => {
     setLoading(true);
     setError('');
     try {
       const res = await backendApi.get(cfg.endpoint);
       setData(res.data);
+      fetchAllTotals();
     } catch {
       setError('Failed to load data. Ensure the backend is running.');
     } finally {
@@ -126,7 +145,7 @@ const FinancialData = () => {
               {c.icon} {tab}
             </p>
             <p className={`text-2xl font-semibold mt-2 ${activeTab === tab ? 'text-white' : 'text-slate-800'}`}>
-              {activeTab === tab ? `₹${total.toLocaleString('en-IN', { maximumFractionDigits: 0 })}` : '—'}
+              ₹{(allTotals[tab] ?? (activeTab === tab ? total : 0)).toLocaleString('en-IN', { maximumFractionDigits: 0 })}
             </p>
           </button>
         ))}

@@ -38,6 +38,11 @@ const ScenarioSimulator = () => {
       .then(res => {
         setBaseline(res.data);
         setError('');
+        // Automatically run initial simulation for realistic demo presentation
+        backendApi.post('/ai/scenario', {
+          scenario_type: 'job_loss',
+          ...defaultInputs,
+        }).then(r => setResult(r.data)).catch(() => {});
       })
       .catch(() => setError('Could not load your current financial baseline.'));
   }, []);
